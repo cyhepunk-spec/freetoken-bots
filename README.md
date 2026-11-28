@@ -11,7 +11,7 @@
 - `probe --model <id>`：对已验证免费的模型做一次真实调用测试（需要 `OPENROUTER_API_KEY` 环境变量）
 - `sync`：输出 Pi 的模型同步提案（仅提案，不改配置）
 
-免费判定是保守的：prompt、completion、request、缓存读写价格必须全部为 0；参数量只认 OpenRouter 返回的直接数字，不从名字或上下文长度推断。
+免费判定是保守的：prompt、completion、request、缓存读写价格必须全部为 0；参数量只认 OpenRouter 返回的直接数字，不从名字或上下文长度推断。扫描只读取公开目录；`probe` 才会发起模型调用。
 
 ## 每日扫描（GitHub Actions）
 
